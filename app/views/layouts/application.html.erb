@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShouldBeDoBlogs</title>
+    <title>ShouldBeDo</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div class="header">
+    <%= link_to "Should Be Do 〜こうしたら良いのに〜", posts_path %>
+  </div>
+  
   <body>
     <%= yield %>
   </body>
+  
+  <div class="footer">
+    <%= link_to 'New Post', new_post_path %>
+  </div>
 </html>
