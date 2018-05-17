@@ -4,14 +4,17 @@
     overflow-y:auto;
     
     .image{
-        margin-left:30%;
+        background:#fff;
+        padding-left:30%;
     }
     
-    .title{
-        margin-bottom:50px;
-    }
-    .content{
-        font-size:20px;
+    .text-content{
+       .title{
+          margin-bottom:50px;
+       }
+      .content{
+          font-size:20px;
+      }   
     }
     
     .button-menu{
