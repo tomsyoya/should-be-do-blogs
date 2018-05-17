@@ -16,6 +16,11 @@
   </body>
   
   <div class="footer">
-    <%= link_to 'New Post', new_post_path %>
+    <%= link_to posts_path do %>
+       <%= image_tag("home-icon.png")%>
+    <% end %>
+    <%= link_to new_post_path do %>
+       <%= image_tag("paper-plane.png")%>
+    <% end %>
   </div>
 </html>
