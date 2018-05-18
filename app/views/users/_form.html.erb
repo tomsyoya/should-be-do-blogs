@@ -1,0 +1,37 @@
+<%= form_with(model: user, local: true) do |form| %>
+ <% if user.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(user.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+     <ul>
+     <% user.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+ <div class="field">
+   <label>ユーザー名</label>
+   <%= form.text_field :name, id: :user_name, placeholder: "必須 最大30文字まで" %>
+ </div>
+
+ <div class="field">
+   <label>Eメール</label>
+   <%= form.email_field :email, id: :user_email, placeholder: "必須 sample@example.com" %>
+ </div>
+ 
+  <div class="field">
+   <label>パスワード</label>
+   <%= form.password_field :password, id: :user_password, placeholder: "必須 半角英数6文字以上" %>
+ </div>
+ 
+  <div class="field">
+   <label>パスワード再入力</label>
+   <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
+ </div>
+
+ <div class="actions">
+   <%= form.submit "登録", class:"submit-btn" %>
+ </div>
+<% end %>

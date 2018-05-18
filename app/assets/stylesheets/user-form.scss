@@ -1,0 +1,43 @@
+.new-user-form{
+    position:absolute;
+    top:15%;
+    left:35%;
+    width:500px;
+    padding-top:15px;
+    padding-left:2%;
+    
+    background-color:white;
+    
+    h3{
+        text-align:center;
+    }
+    
+    form{
+        margin-top:30px;
+        
+       .field {
+           margin-left:20px;
+           
+          input{
+              width:400px;
+              height:25px;
+              border:none;
+              border-bottom:1px dotted #232538;
+              
+              margin-bottom:3%;
+          }
+       }
+       
+       .actions{
+           margin:10% 0 10% 50px;
+          .submit-btn{
+              box-shadow: 0 0 10px grey;
+              border-radius:18px;
+              
+              width:340px;
+              
+              font-size: 18px;
+          }
+       }
+    }
+}
