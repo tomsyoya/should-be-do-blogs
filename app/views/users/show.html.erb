@@ -1,2 +1,31 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 user-profile">
+      <p id="notice"><%= notice %></p>
+      
+      <div class="image">
+        <% if @user.image.present? %>
+          <%=image_tag @user.image %>
+        <% else %>
+          <%=image_tag('default-profile.png') %>
+        <% end %>
+      </div>
+      
+      <div class="name">
+        <h2><%= @user.name %></h2>
+      </div>
+      
+      <div class="email">
+        <h2><%= @user.email %></h2>
+      </div>
+      
+      <div class="introduction">
+        <%= @user.introduction %>
+      </div>
+      
+      <div class="button-menu">
+        <%= link_to 'Edit', edit_user_path(@user), class:"btn btn-info" %> 
+      </div>
+    </div>
+  </div>
+</div>

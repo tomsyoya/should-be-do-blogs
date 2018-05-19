@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user_id, only: [:edit, :show, :destroy]
+  before_action :set_user_id, only: [:edit, :update, :show, :destroy]
   
   def new
     @user = User.new
@@ -23,6 +23,12 @@ class UsersController < ApplicationController
   end
 
   def update
+
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      render :edit
+    end
   end
 
   def destroy

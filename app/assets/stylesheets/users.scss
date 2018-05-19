@@ -1,3 +1,35 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-profile{
+    position:relative;
+    left:5%;
+    margin-top:5%;
+    
+    text-align:center;
+    
+    img{
+        width:70px;
+        border-radius:50%;
+        border:1px solid #eee;
+    }
+}
+
+.user-edit-form{
+    margin-top:2%;
+    padding-left:35%;
+    
+    .field {
+       input{
+           height:35px;
+           width:350px;
+           
+           font-size:16px;
+       }
+       
+       textarea{
+           width:350px;
+           height:150px;
+       }
+    }
+}
