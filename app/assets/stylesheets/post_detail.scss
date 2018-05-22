@@ -1,11 +1,16 @@
 .post-content-detail{
-    padding-left:20%;
-    height:750px;
+    margin-left:22%;
+    height:600px;
+    max-width:600px;
     overflow-y:auto;
     
     .image{
         background:#fff;
-        padding-left:30%;
+        max-width:600px;
+        max-height:400px; 
+        img{
+         width:100%;
+        }
     }
     
     .text-content{

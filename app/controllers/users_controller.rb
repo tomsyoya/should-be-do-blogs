@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user_id, only: [:edit, :update, :show, :destroy]
+  before_action :check_logged_in, only: [:show, :edit, :update, :destroy]
   
   def new
     @user = User.new
@@ -43,5 +44,11 @@ class UsersController < ApplicationController
   
   def set_user_id
     @user = User.find(params[:id])
+  end
+  
+  def check_logged_in
+    if !logged_in?
+      redirect_to new_session_path
+    end
   end
 end
