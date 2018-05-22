@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 login-form">
+        <div>
+           <h3>LOGIN</h3>
+        </div>
+       <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+         <div class="field">
+           <%= f.label :email %>
+           <%= f.email_field :email %>
+         </div>
+
+         <div class="field">
+           <%= f.label :password %>
+           <%= f.password_field :password %>
+         </div>
+
+         <div class="login-action">
+           <%= f.submit "Log in", class:"submit-btn" %>
+         </div>
+         <div class="logon-action">
+             新規登録をされる方は<%= link_to "こちら", new_user_path %>
+         </div>
+       <% end %>
+     </div>
+  </div>
+</div>

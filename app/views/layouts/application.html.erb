@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ShouldBeDo</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <div class="header">
-    <%= link_to "Should Be Do 〜こうしたら良いのに〜", posts_path %>
-  </div>
+    <head>
+      <title>ShouldBeDo</title>
+      <%= csrf_meta_tags %>
+  
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+  <% if logged_in? %>
+    <div class="header">
+      <%= link_to "Should Be Do 〜こうしたら良いのに〜", posts_path %>
+    </div>
+  <% end %>
   
   <body>
     <%= yield %>
   </body>
   
-  <div class="footer">
-    <%= link_to new_user_path do %>
-       <%= image_tag("user-icon.png")%>
-    <% end %>
-    <%= link_to posts_path do %>
-       <%= image_tag("home-icon.png")%>
-    <% end %>
-    <%= link_to new_post_path do %>
-       <%= image_tag("paper-plane.png")%>
-    <% end %>
-  </div>
+  <% if logged_in? %>
+      <div class="footer">
+        <%= link_to user_path(current_user.id) do %>
+           <%= image_tag("user-icon.png")%>
+        <% end %>
+        <%= link_to posts_path do %>
+           <%= image_tag("home-icon.png")%>
+        <% end %>
+        <%= link_to new_post_path do %>
+           <%= image_tag("paper-plane.png")%>
+        <% end %>
+      </div>
+  <% end %>
 </html>
