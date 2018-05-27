@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-10 user-profile">
+    <div class="col-md-12 user-profile">
       <div class="mypage-menu">
          <p id="notice"><%= notice %></p>
            <div class="user-image">
@@ -31,13 +31,22 @@
           <% end %>
       </div>
       
-      <div class="user-post-list">
-        <%= render "post_list", posts: @user.posts %>
-      </div>
-      
-      <div>
-          <%= render "favorites/favorite_list", favorites: @user.favorites %>
-      </div>
+      <ul class="tab">
+　　　    <li class="select">投稿</li>
+　　　    <li>お気に入り</li>
+　　　</ul>
+      <ul class="content">
+          <li>
+      　     <div class="user-post-list">
+      　       <%= render "post_list", posts: @user.posts %>
+      　     </div>
+          </li>
+          <li class="hide">
+            <div class="user-favorite-list">
+                <%= render "favorites/favorite_list", favorites: @user.favorite_posts %>
+            </div>
+          </li>
+      </ul>
       
     </div>
   </div>

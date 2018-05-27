@@ -46,6 +46,10 @@
                <div class="content">
                  <%= comment.content %>
                </div>
+               <div class="comment-menu-btn">
+                 <%= link_to '編集する', edit_comment_path(comment.id) %> | 
+                 <%= link_to '削除する', comment_path(comment.id), method: :delete %>
+               </div>
              </div>
            <% end %>
         <% else %>

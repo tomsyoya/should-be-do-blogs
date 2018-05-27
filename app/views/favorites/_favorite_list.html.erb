@@ -1,34 +1,45 @@
 <div class="container">
   <div class="row">
-     <% favorites.each do |post| %>
+     <% favorites.each do |favorite| %>
          <div class="col-md-4 post-box">
            
            <div class="post-user">
-               <%= link_to user_path(post.user.id) do %>
-                 <% if post.user.image.present? %>
-                    <%= image_tag post.user.image %>
+               <%= link_to user_path(favorite.user.id) do %>
+                 <% if favorite.user.image.present? %>
+                    <%= image_tag favorite.user.image %>
                  <% else %>
                     <%= image_tag("default-profile.png") %>
                  <% end %>
-                 <%= post.user.name %>
+                 <%= favorite.user.name %>
                <% end %>
            </div>
            
-           <%= link_to post do %>
+           <%= link_to favorite do %>
              <div class="post-image">
-               <%= image_tag post.image %>
+               <%= image_tag favorite.image %>
              </div>
              <div class="post-content">
-                 <h4><%= post.title %></h4>
+                 <h4><%= favorite.title %></h4>
                  <div class="post-text">
-                   <%= post.content %>
+                   <%= favorite.content %>
                  </div>
              </div>
-             <div class="comment-btn">
-               <%= link_to new_comment_path(post_id: post.id) do %>
+             <div class="btn-menu">
+                <% favorite_marked = current_user.favorites.find_by(post_id: favorite.id)%>
+                <% if favorite_marked.present? %>
+                    <%= link_to favorite_path(favorite.id), method: :delete do %>
+                      <%= image_tag("star-liked.png") %>
+                    <% end %>
+                <% else %>
+                    <%= link_to favorites_path(post_id: favorite.id), method: :post do %>
+                      <%= image_tag("star.png") %>
+                    <% end %>
+                <% end %>
+                <%= favorite.favorites.count %>
+               <%= link_to new_comment_path(post_id: favorite.id) do %>
                  <%= image_tag("message_icon.png") %>
                <% end %>
-               <%= post.comments.count %>
+               <%= favorite.comments.count %>
              </div>
            <% end %>
            
