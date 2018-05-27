@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@comment.post_id)
     else
+      @post = Post.find(@comment.post_id)
       render "new"
     end
   end
