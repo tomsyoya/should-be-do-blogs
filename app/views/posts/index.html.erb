@@ -27,7 +27,6 @@
               </div>
               
               <div class="btn-menu">
-                
                 <% favorite = current_user.favorites.find_by(post_id: post.id)%>
                 <% if favorite.present? %>
                     <%= link_to favorite_path(post.id), method: :delete do %>
@@ -46,6 +45,7 @@
                 <%= post.comments.count %>
                 
               </div>
+              <%= social_share_button_tag(post.title) %>
             <% end %>
             
           </div>
