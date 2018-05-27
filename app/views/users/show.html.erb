@@ -35,6 +35,10 @@
         <%= render "post_list", posts: @user.posts %>
       </div>
       
+      <div>
+          <%= render "favorites/favorite_list", favorites: @user.favorites %>
+      </div>
+      
     </div>
   </div>
 </div>
