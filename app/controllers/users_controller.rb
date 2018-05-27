@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :check_logged_in, only: [:show, :edit, :update, :destroy]
   
   def new
+    if logged_in?
+      redirect_to user_path(current_user.id)
+    end
     @user = User.new
   end
 

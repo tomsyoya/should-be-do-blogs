@@ -1,49 +1,53 @@
 <div class="container">
   <div class="row">
-     <% posts.each do |post| %>
-         <div class="col-md-4 post-box">
-           
-           <div class="post-user">
-               <%= link_to user_path(post.user.id) do %>
-                 <% if post.user.image.present? %>
-                    <%= image_tag post.user.image %>
-                 <% else %>
-                    <%= image_tag("default-profile.png") %>
-                 <% end %>
-                 <%= post.user.name %>
-               <% end %>
-           </div>
-           
-           <%= link_to post do %>
-             <div class="post-image">
-               <%= image_tag post.image %>
-             </div>
-             <div class="post-content">
-                 <h4><%= post.title %></h4>
-                 <div class="post-text">
-                   <%= post.content %>
-                 </div>
-             </div>
-             <div class="comment-btn">
-                <% favorite_marked = current_user.favorites.find_by(post_id: post.id)%>
-                <% if favorite_marked.present? %>
-                    <%= link_to favorite_path(post.id), method: :delete do %>
-                      <%= image_tag("star-liked.png") %>
+     <% if posts.present? %>
+        <% posts.each do |post| %>
+            <div class="col-md-4 post-box">
+              
+              <div class="post-user">
+                  <%= link_to user_path(post.user.id) do %>
+                    <% if post.user.image.present? %>
+                       <%= image_tag post.user.image %>
+                    <% else %>
+                       <%= image_tag("default-profile.png") %>
                     <% end %>
-                <% else %>
-                    <%= link_to favorites_path(post_id: post.id), method: :post do %>
-                      <%= image_tag("star.png") %>
-                    <% end %>
-                <% end %>
-                <%= post.favorites.count %>
-               <%= link_to new_comment_path(post_id: post.id) do %>
-                 <%= image_tag("message_icon.png") %>
-               <% end %>
-               <%= post.comments.count %>
-             </div>
-           <% end %>
-           
-         </div>
+                    <%= post.user.name %>
+                  <% end %>
+              </div>
+              
+              <%= link_to post do %>
+                <div class="post-image">
+                  <%= image_tag post.image %>
+                </div>
+                <div class="post-content">
+                    <h4><%= post.title %></h4>
+                    <div class="post-text">
+                      <%= post.content %>
+                    </div>
+                </div>
+                <div class="comment-btn">
+                   <% favorite_marked = current_user.favorites.find_by(post_id: post.id)%>
+                   <% if favorite_marked.present? %>
+                       <%= link_to favorite_path(post.id), method: :delete do %>
+                         <%= image_tag("star-liked.png") %>
+                       <% end %>
+                   <% else %>
+                       <%= link_to favorites_path(post_id: post.id), method: :post do %>
+                         <%= image_tag("star.png") %>
+                       <% end %>
+                   <% end %>
+                   <%= post.favorites.count %>
+                  <%= link_to new_comment_path(post_id: post.id) do %>
+                    <%= image_tag("message_icon.png") %>
+                  <% end %>
+                  <%= post.comments.count %>
+                </div>
+              <% end %>
+              
+            </div>
+        <% end %>
+     <% else %>
+        <h4>###  右下の投稿ボタンから、あなたが"こうしたら良いのに"と思うトピックを投稿してみましょう！ ###</h4>
      <% end %>
   </div>
 </div>

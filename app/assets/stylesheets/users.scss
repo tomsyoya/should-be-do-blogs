@@ -63,7 +63,9 @@
     
     .user-post-list{
         border-radius:10px;
-    
+        h4{
+            text-align:center;
+        }
         .post-box{
             border-radius:10px;
             background:#fff;
@@ -96,9 +98,7 @@
                 }
             }
             
-            h4{
-                text-align:center;
-            }
+            
             
             .post-text{
                 font-size:12px;
@@ -119,6 +119,7 @@
                 }
             }
         }
+
     }
     
 }

@@ -11,10 +11,10 @@ p, ol, ul, td {
 
 a {
   color: #000;
+}
 
-  &:visited {
-    color: #666;
-  }
+a:hover{
+  text-decoration: none;
 }
 
 div {
