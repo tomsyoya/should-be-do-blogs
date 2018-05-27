@@ -2,33 +2,38 @@
   <div class="row">
     <div class="col-md-9 post-list">
       <% @posts.each do |post| %>
-        <%= link_to post do %>
           <div class="post-box">
+            
             <div class="post-user">
-              <% if post.user.image.present? %>
-                 <%= image_tag post.user.image %>
-              <% else %>
-                 <%= image_tag("default-profile.png") %>
-              <% end %>
-              <%= post.user.name %>
+                <%= link_to user_path(post.user.id) do %>
+                  <% if post.user.image.present? %>
+                     <%= image_tag post.user.image %>
+                  <% else %>
+                     <%= image_tag("default-profile.png") %>
+                  <% end %>
+                  <%= post.user.name %>
+                <% end %>
             </div>
-            <div class="post-image">
-              <%= image_tag post.image %>
-            </div>
-            <div class="post-content">
-                <h4><%= post.title %></h4>
-                <div class="post-text">
-                  <%= post.content %>
-                </div>
-            </div>
-            <div class="comment-btn">
-              <%= link_to new_comment_path(post_id: post.id) do %>
-                <%= image_tag("message_icon.png") %>
-              <% end %>
-              <%= post.comments.count %>
-            </div>
+            
+            <%= link_to post do %>
+              <div class="post-image">
+                <%= image_tag post.image %>
+              </div>
+              <div class="post-content">
+                  <h4><%= post.title %></h4>
+                  <div class="post-text">
+                    <%= post.content %>
+                  </div>
+              </div>
+              <div class="comment-btn">
+                <%= link_to new_comment_path(post_id: post.id) do %>
+                  <%= image_tag("message_icon.png") %>
+                <% end %>
+                <%= post.comments.count %>
+              </div>
+            <% end %>
+            
           </div>
-        <% end %>
       <% end %>
     </div>
   </div>

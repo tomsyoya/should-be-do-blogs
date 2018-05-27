@@ -2,34 +2,79 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user-profile{
-    position:relative;
-    left:5%;
-    margin-top:5%;
-    
-    text-align:center;
-    
-    img{
-        width:70px;
-        border-radius:50%;
-        border:1px solid #eee;
+    .mypage-menu{
+        position:relative;
+        left:5%;
+        margin-top:5%;
+        
+        text-align:center;
+        
+        .user-image{
+           img{
+               width:70px;
+               border-radius:50%;
+               border:1px solid #eee;
+           }
+        }
     }
-}
-
-.user-edit-form{
-    margin-top:2%;
-    padding-left:35%;
     
-    .field {
-       input{
-           height:35px;
-           width:350px;
-           
-           font-size:16px;
-       }
-       
-       textarea{
-           width:350px;
-           height:150px;
-       }
+    .user-post-list{
+        border-radius:10px;
+        
+        .post-box{
+            border-radius:10px;
+            background:#fff;
+            border:2px solid #eee;
+            
+            padding:0 20px;
+          
+            .post-user{
+                width:100%;
+                margin-top:20px;
+                background-color:white;
+                img{
+                    border-radius:20px;
+                    width:40px;
+                }
+            }
+    
+            .post-image{
+                position: relative;
+                height:200px;
+                width:100%;
+                overflow: hidden;
+                
+                img{
+                    position: absolute;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            
+            h4{
+                text-align:center;
+            }
+            
+            .post-text{
+                font-size:12px;
+                
+                line-height: 15px;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                text-overflow: "…";
+            }
+            
+            .comment-btn{
+                width:100%;
+                margin-top:10px;
+                margin-left:90%;
+                img{
+                    border-radius:20px;
+                    width:25px;
+                }
+            }
+        }
     }
 }

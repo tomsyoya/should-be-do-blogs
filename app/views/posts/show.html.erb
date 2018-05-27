@@ -33,7 +33,14 @@
            <% @post.comments.each do |comment| %>
              <div class="comment-box">
                <div class="comment-info">
-                 <span id="user-name"><%= image_tag comment.user.image %><%= comment.user.name %></span>
+                 <span id="user-name">
+                   <% if comment.user.image.present? %>
+                      <%= image_tag comment.user.image %>
+                   <% else %>
+                      <%= image_tag("default-profile.png") %>
+                   <% end %>
+                   <%= comment.user.name %>
+                 </span>
                  <span id="commentted-time"><%= comment.created_at %></span>
                </div>
                <div class="content">
