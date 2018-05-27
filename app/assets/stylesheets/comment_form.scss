@@ -1,0 +1,53 @@
+.new_comment_form{
+    margin-left:22%;
+    height:600px;
+    max-width:600px;
+    overflow-y:auto;
+    
+    .post-image{
+        background:#fff;
+        max-width:600px;
+        max-height:400px; 
+        img{
+         width:100%;
+        }
+    }
+    
+    .post-content{
+       .title{
+          margin-bottom:50px;
+       }
+      .content{
+          font-size:20px;
+      }   
+    }
+    
+    .button-menu{
+        padding-left:80%;
+    }
+    
+    .comment-form{
+      margin-top:5%;
+      width:100%;
+      
+      textarea#comment_content{
+          height:150px;
+          width:100%;
+          border-radius:10px;
+          border: 2px solid #5ebaba;
+      }
+      
+      .actions{
+          padding-left:35%;
+          
+          input[type=submit]{
+              background:#fff;
+              border-radius:10px;
+              border: 2px solid #5ebaba;
+              padding:10px;
+              
+              font-size:20px;
+          }
+      }
+    }
+}

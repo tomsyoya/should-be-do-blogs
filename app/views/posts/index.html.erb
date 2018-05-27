@@ -4,6 +4,14 @@
       <% @posts.each do |post| %>
         <%= link_to post do %>
           <div class="post-box">
+            <div class="post-user">
+              <% if post.user.image.present? %>
+                 <%= image_tag post.user.image %>
+              <% else %>
+                 <%= image_tag("default-profile.png") %>
+              <% end %>
+              <%= post.user.name %>
+            </div>
             <div class="post-image">
               <%= image_tag post.image %>
             </div>
@@ -13,13 +21,11 @@
                   <%= post.content %>
                 </div>
             </div>
-            <div class="post-user">
-              <% if post.user.image.present? %>
-                 <%= image_tag post.user.image %>
-              <% else %>
-                 <%= image_tag("default-profile.png") %>
+            <div class="comment-btn">
+              <%= link_to new_comment_path(post_id: post.id) do %>
+                <%= image_tag("message_icon.png") %>
               <% end %>
-              <%= post.user.name %>
+              <%= post.comments.count %>
             </div>
           </div>
         <% end %>
