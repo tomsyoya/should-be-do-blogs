@@ -5,11 +5,13 @@
     overflow-y:auto;
     
     .image{
-        background:#fff;
-        max-width:600px;
+        max-width:500px;
         max-height:400px; 
+        text-align:center;
+        margin-left:12%;
         img{
-         width:100%;
+          max-width:100%;
+          height:auto;
         }
     }
     

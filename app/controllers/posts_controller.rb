@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
 
      if @post.save
-       redirect_to @post
+       redirect_to @post, notice: 'Post was successfully created.'
      else
        render :new 
      end
