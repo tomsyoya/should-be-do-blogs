@@ -63,3 +63,6 @@ gem "mini_magick"
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
 gem 'social-share-button'
+
+gem 'fog-aws'
+gem 'fog'
