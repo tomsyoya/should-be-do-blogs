@@ -7,6 +7,6 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'post-image-box'
-  config.asset_host = "https://s3.ap-northeast-1.amazonaws.com/post-image-box"
+  config.asset_host = "https://s3.amazonaws.com/post-image-box"
   config.cache_storage = :fog
 end
