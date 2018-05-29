@@ -34,15 +34,17 @@
              <div class="comment-box">
                
                <div class="comment-info">
-                 <span id="user-name">
-                   <% if comment.user.image.present? %>
-                      <%= image_tag comment.user.image %>
-                   <% else %>
-                      <%= image_tag("default-profile.png") %>
+                 <p class="user-name">
+                   <%= link_to user_path(comment.user.id) do%>
+                      <% if comment.user.image.present? %>
+                         <%= image_tag comment.user.image %>
+                      <% else %>
+                         <%= image_tag("default-profile.png") %>
+                      <% end %>
+                      <%= comment.user.name %>
                    <% end %>
-                   <%= comment.user.name %>
-                 </span>
-                 <span id="commentted-time"><%= comment.created_at %></span>
+                 </p>
+                 <p class="commentted-time"><%= comment.created_at %></p>
                </div>
                
                <div class="content">
