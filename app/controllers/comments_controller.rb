@@ -19,13 +19,13 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(@comment.post_id)
   end
 
   def update
     if @comment.update(get_params)
       redirect_to post_path(@comment.post_id)
     else
+      @post = Post.find(@comment.post_id)
       render "edit"
     end
   end
@@ -45,5 +45,6 @@ class CommentsController < ApplicationController
   def get_comment_id
     @comment = Comment.find(params[:id])
   end
+
 
 end

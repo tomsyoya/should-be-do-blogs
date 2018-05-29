@@ -45,6 +45,8 @@
 .user-edit-form{
     margin-top:2%;
     padding-left:35%;
+    height:600px;
+    overflow-y:auto;
     
     .field {
        input{
