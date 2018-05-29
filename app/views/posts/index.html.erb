@@ -18,7 +18,9 @@
             
             <%= link_to post do %>
               <div class="post-image">
-                <%= image_tag post.image %>
+                <% if post.image.present? %>
+                   <%= image_tag post.image %>
+                <% end %>
               </div>
               <div class="post-content">
                   <h4><%= post.title %></h4>

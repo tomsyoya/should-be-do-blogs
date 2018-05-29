@@ -1,12 +1,14 @@
 CarrierWave.configure do |config|
-  config.fog_credentials = {
-    provider: 'AWS',
-    aws_access_key_id: ENV['ACCESS_KEY_ID'],
-    aws_secret_access_key: ENV['SECRET_ACCESS_KEY'],
-    region: 'us-west-1'
-  }
-
-  config.fog_directory  = 'post-image-box'
-  config.asset_host = "https://s3.us-west-1.amazonaws.com/post-image-box"
-  config.cache_storage = :fog
+  if Rails.env.production?
+    config.fog_credentials = {
+      provider: 'AWS',
+      aws_access_key_id: ENV['ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['SECRET_ACCESS_KEY'],
+      region: 'us-west-1'
+    }
+  
+    config.fog_directory  = 'post-image-box'
+    config.asset_host = "https://s3.us-west-1.amazonaws.com/post-image-box"
+    config.cache_storage = :fog
+  end
 end
