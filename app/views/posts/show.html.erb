@@ -17,17 +17,15 @@
       </div>
       
       <div class="button-menu">
+        <%= link_to new_comment_path(post_id: @post.id) do %>
+            <%= image_tag("message_icon.png") %>  コメントする | 
+        <% end %>
         <% if current_user.id == @post.user.id%>
-          <%= link_to '編集する', edit_post_path(@post), class:"btn btn-warning" %> |
+          <%= link_to '編集する', edit_post_path(@post), class:"btn btn-warning" %> 
           <%= link_to '投稿を削除する', post_path(@post), method: :delete, data: { confirm: 'この投稿を削除しますか?' }, class:"btn btn-danger" %> |
         <% end %>
         <%= link_to '戻る', posts_path, class:"btn btn-info" %>
-        
-        <div class="comment-btn">
-          <%= link_to new_comment_path(post_id: @post.id) do %>
-            <%= image_tag("message_icon.png") %>  コメントする
-          <% end %>
-        </div>
+
       </div>
       
       <div class="comment-list">
