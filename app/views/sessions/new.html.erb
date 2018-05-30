@@ -5,7 +5,9 @@
         <div>
            <h3>LOGIN</h3>
         </div>
+        <p class="error_message"><%= flash[:error] %></p>
        <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+         
          <div class="field">
            <%= f.label :email %>
            <%= f.email_field :email %>

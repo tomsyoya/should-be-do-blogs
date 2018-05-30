@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  
+  def index
+    redirect_to root_path
+  end
 
   def new
     if logged_in?
@@ -13,7 +17,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user.id)
     else
-      render :new, notice: "ログインに失敗しました"
+      flash[:error] = "ログインIDまたはパスワードのどちらかが誤っています"
+      render :new
     end
   end
 

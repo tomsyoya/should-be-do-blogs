@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root :to => "sessions#new"
   
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:index, :new, :create, :destroy]
 
   resources :users, except: :index
 
