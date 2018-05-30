@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_action :set_user_id, only: [:edit, :update, :show, :destroy]
   before_action :check_logged_in, only: [:show, :edit, :update, :destroy]
   
+  def index
+    redirect_to new_user_path
+  end
+  
   def new
     if logged_in?
       redirect_to user_path(current_user.id)
