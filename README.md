@@ -39,5 +39,3 @@ $ cd should-be-do-blogs/
 $ rails s -b $IP -p $PORT
 ```
 
-これで http://localhostにアクセスできるようになり、アプリケーションの操作が行えます。
-
