@@ -1,4 +1,4 @@
-# Should Be Done ~こうしたら良いのに~ [![Code Climate](https://codeclimate.com/github/sugamasao/Shiori.png)](https://github.com/tomsyoya/)
+# Should Be Done \~こうしたら良いのに~\
 
 ## これはなに
 
@@ -7,7 +7,8 @@ Ruby on Railsを学んだので、覚えた技術を使って作成したWebア�
 
 https://quiet-depths-77950.herokuapp.com/
 
-![Topページ](https://imgur.com/a/ZXcbMqw)
+![Topページ](https://user-images.githubusercontent.com/8188920/41164047-33e00332-6b75-11e8-860a-d0660d23b101.png)
+
 
 ”こうしたら良いのに”という議論のネタを投稿してみんなでアイディアを言い合うWebアプリです。
 
