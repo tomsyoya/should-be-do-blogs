@@ -1,24 +1,41 @@
-# README
+# サンプルアプリケーション Shiori [![Code Climate](https://codeclimate.com/github/sugamasao/Shiori.png)](https://codeclimate.com/github/sugamasao/Shiori)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## これはなに
 
-Things you may want to cover:
+Ruby on Railsを学んだので、覚えた技術を使って作成したWebアプリです。
+以下のURLから動作しているものを触れます。
 
-* Ruby version
+https://quiet-depths-77950.herokuapp.com/
 
-* System dependencies
+![Topページ](https://imgur.com/a/ZXcbMqw)
 
-* Configuration
+”こうしたら良いのに”という議論のネタを投稿してみんなでアイディアを言い合うWebアプリです。
 
-* Database creation
+現時点(2018/06/01)で提供している機能は以下の通り
 
-* Database initialization
+- 議論したいスレッドの投稿
+- 投稿されたスレッドに対するコメント
 
-* How to run the test suite
+## 使うためには
 
-* Services (job queues, cache servers, search engines, etc.)
+以下の環境が準備されていることを前提としています
 
-* Deployment instructions
+- Ruby 2.4.0 以上
+- gemパッケージ bundlerのインストール（gem install bundler）
+- PostgreSQL
 
-* ...
+### 各種gemのインストール
+
+```
+$ bundle install
+```
+
+### アプリケーションの起動
+
+```
+$ cd should-be-do-blogs/
+$ rails s -b $IP -p $PORT
+```
+
+これで http://localhostにアクセスできるようになり、アプリケーションの操作が行えます。
+
