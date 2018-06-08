@@ -1,4 +1,4 @@
-# サンプルアプリケーション Shiori [![Code Climate](https://codeclimate.com/github/sugamasao/Shiori.png)](https://codeclimate.com/github/sugamasao/Shiori)
+# Should Be Done ~こうしたら良いのに~ [![Code Climate](https://codeclimate.com/github/sugamasao/Shiori.png)](https://github.com/tomsyoya/)
 
 ## これはなに
 
@@ -21,6 +21,7 @@ https://quiet-depths-77950.herokuapp.com/
 以下の環境が準備されていることを前提としています
 
 - Ruby 2.4.0 以上
+- Rails 5.1.0 以上
 - gemパッケージ bundlerのインストール（gem install bundler）
 - PostgreSQL
 
