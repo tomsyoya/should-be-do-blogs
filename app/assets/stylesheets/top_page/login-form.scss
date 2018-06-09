@@ -1,0 +1,36 @@
+@import "../common/top-page-form.scss";
+
+.login-form{
+    @include topPageFormMixin;
+    
+    left: 22%;
+    padding-left: 12%;
+    
+    width: 800px;
+    
+    h3{
+        padding-right: 28%;
+    }
+    
+    .error_message{
+        margin-right: 8%;
+        
+        text-align: center;
+        color: #c00;
+        font-weight: bold;
+    }
+    
+    form{
+        .action{
+           margin: 60px;    
+        }
+    }
+    
+    .logon-action{
+        text-align: right;
+        margin: 60px;
+        a{
+            color: blue;
+        }
+    }
+}

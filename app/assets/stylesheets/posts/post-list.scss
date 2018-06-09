@@ -1,0 +1,31 @@
+@import "../common/post-box-style.scss";
+
+.post-list{
+    margin-left:5%;
+    padding-left:17%;
+    
+    height:670px;
+    overflow-y:auto;
+    
+    .post-box{
+        @include postBoxLayoutMixin;
+
+        .post-image{
+            text-align:center;
+            vertical-align:center;
+            
+            img{
+                max-width: 100%;
+            }
+        }
+        
+        h4{
+            text-align:center;
+        }
+        
+        .btn-menu{
+            margin-left:85%;
+        }
+
+    }
+}

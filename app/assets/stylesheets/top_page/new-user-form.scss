@@ -1,0 +1,28 @@
+@import "../common/top-page-form.scss";
+
+h2#top-page{
+    padding-top: 2%;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.new-user-form{
+    @include topPageFormMixin;
+    
+    left: 35%;
+    width: 500px;
+
+    form{
+       .action{
+           margin:10% 0 10% 50px;
+       }
+    }
+    
+    .login-action{
+        text-align: right;
+        margin-bottom: 60px;
+        a{
+            color: blue;
+        }
+    }
+}

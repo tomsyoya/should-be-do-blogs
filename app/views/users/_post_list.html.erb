@@ -25,7 +25,7 @@
                       <%= post.content %>
                     </div>
                 </div>
-                <div class="comment-btn">
+                <div class="btn-menu">
                    <% favorite_marked = current_user.favorites.find_by(post_id: post.id)%>
                    <% if favorite_marked.present? %>
                        <%= link_to favorite_path(post.id), method: :delete do %>

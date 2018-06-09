@@ -4,7 +4,9 @@
         <div class="col-md-10 new-user-form">
             <h3>Sign Up</h3>
             <%= render "form", user: @user %>
-            <p>ログインページは<%= link_to "こちら", root_path %></p>
+            <div class="login-action">
+              ログインページは<%= link_to "こちら", root_path %>
+            </div>
         </div>
     </div>
 </div>
