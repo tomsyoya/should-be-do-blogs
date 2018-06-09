@@ -1,39 +1,39 @@
 .post-form-block{
-    padding-top:5%;
-    padding-left:25%;
-    padding-right:25%;
+    padding-top: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
     
-    width:100%;
+    width: 100%;
     
     input#post_title{
-        height:40px;
-        width:100%;
-        border-radius:10px;
+        height: 40px;
+        width: 100%;
+        border-radius: 10px;
         border: 2px solid #5ebaba;
     }
     
     textarea#post_content{
-        height:150px;
-        width:100%;
-        border-radius:10px;
+        height: 150px;
+        width: 100%;
+        border-radius: 10px;
         border: 2px solid #5ebaba;
     }
     
     .actions{
-        padding-left:40%;
+        padding-left: 40%;
         
         
         input[type=submit]{
             background:#fff;
-            border-radius:10px;
+            border-radius: 10px;
             border: 2px solid #5ebaba;
-            padding:10px;
+            padding: 10px;
             
-            font-size:20px;
+            font-size: 20px;
         }
     }
     
     .back-button{
-        text-align:right;
+        text-align: right;
     }
 }
