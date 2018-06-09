@@ -1,8 +1,8 @@
 # Should Be Done \~こうしたら良いのに~\
 
-## これはなに
+## overview
 
-Ruby on Railsを学んだので、覚えた技術を使って作成したWebアプリです。
+Ruby on Railsを学んだので、覚えた技術を使って作成したWebアプリです。  
 以下のURLから動作しているものを触れます。
 
 https://quiet-depths-77950.herokuapp.com/
@@ -17,7 +17,7 @@ https://quiet-depths-77950.herokuapp.com/
 - 議論したいスレッドの投稿
 - 投稿されたスレッドに対するコメント
 
-## 使うためには
+## How To Use
 
 以下の環境が準備されていることを前提としています
 
@@ -38,6 +38,4 @@ $ bundle install
 $ cd should-be-do-blogs/
 $ rails s -b $IP -p $PORT
 ```
-
-これで http://localhostにアクセスできるようになり、アプリケーションの操作が行えます。
 
