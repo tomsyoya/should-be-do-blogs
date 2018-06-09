@@ -1,6 +1,54 @@
-body {
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+/* ==========================================================================
+   ヘッダー
+   ========================================================================== */
+
+.header{
+    margin:0;
+    height:50px;
+    border-bottom: 1px solid #eee;
+    background-color: #5ebaba;
+    text-align:center;
+    padding-top:15px;
+    
+    a{
+      color:#fff;
+    }
+}
+
+/* ==========================================================================
+   body
+   ========================================================================== */
+
+body{
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+
+.footer{
+    position:fixed;
+    bottom:0;
+    height:55px;
+    width:100%;
+    padding-top:5px;
+    padding-left:39%;
+    
+    background:#5ebaba;
+    border-top:1px solid #eee;
+    
+    img{
+        width:45px;
+        border-radius:50%;
+        border: 1px solid #eee;
+        background-color: #f9f9f9;
+        margin:0 30px;
+    }
 }
 
 p, ol, ul, td {
@@ -8,6 +56,10 @@ p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
+
+/* ==========================================================================
+   リンクボタン
+   ========================================================================== */
 
 a {
   color: #000;
@@ -17,16 +69,9 @@ a:hover{
   text-decoration: none;
 }
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-
-#notice {
-  color: green;
-}
-
+/* ==========================================================================
+   エラーメッセージ
+   ========================================================================== */
 .field_with_errors {
   padding: 2px;
   background-color: red;
@@ -60,4 +105,16 @@ div {
 
 label {
   display: block;
+}
+
+
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
 }
