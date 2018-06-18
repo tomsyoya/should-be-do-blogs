@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       redirect_to post_path(@comment.post_id)
     else
       @post = Post.find(@comment.post_id)
-      render "new"
+      render :new
     end
   end
 
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
       redirect_to post_path(@comment.post_id)
     else
       @post = Post.find(@comment.post_id)
-      render "edit"
+      render :edit
     end
   end
 
