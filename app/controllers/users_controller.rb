@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user_id, only: [:edit, :update, :show, :destroy]
-  before_action :check_logged_in, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_id, only: %i[edit update show destroy]
+  before_action :check_logged_in, only: %i[show edit update destroy]
   
   def index
     redirect_to new_user_path
