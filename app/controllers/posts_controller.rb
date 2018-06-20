@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :check_logged_in
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("id DESC")
   end
 
   def show
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
      if @post.save
        redirect_to @post, notice: "新規ポスト: #{@post.title} の投稿に成功しました"
      else
-       render :new 
+       render :new
      end
   end
 
