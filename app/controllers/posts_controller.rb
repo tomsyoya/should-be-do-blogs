@@ -17,8 +17,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post = current_user.posts.create(post_params)
 
      if @post.save
        redirect_to @post, notice: "新規ポスト: #{@post.title} の投稿に成功しました"
