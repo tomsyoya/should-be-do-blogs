@@ -40,6 +40,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user.destroy
+    session.delete(:user_id)
+    redirect_to new_session_path
   end
   
   private

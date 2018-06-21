@@ -23,4 +23,21 @@
            height:150px;
        }
     }
+    
+    .actions{
+        .submit-btn{
+            float: left;
+            input[type=submit]{
+                background:#fff;
+                border-radius: 10px;
+                border: 2px solid #5ebaba;
+                padding: 5px 10px;
+                
+                font-size: 15px;
+            }
+        }
+        .back-btn{
+            float: right;
+        }
+    }
 }

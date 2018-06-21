@@ -2,16 +2,30 @@
    ヘッダー
    ========================================================================== */
 
-.header{
-    margin:0;
-    height:50px;
+.header {
+    margin: 0;
+    height: 50px;
     border-bottom: 1px solid #eee;
     background-color: #5ebaba;
-    text-align:center;
-    padding-top:15px;
+    text-align: center;
+    padding-top: 15px;
     
-    a{
-      color:#fff;
+    .header-logo{
+      float: left;
+      margin-left:40%;
+      a{
+        color:#fff;
+      }
+    }
+    
+    .header-logout {
+      float: right;
+      margin-right: 5%;
+      
+      a.logout-btn {
+        padding:4px;
+        color:#fff;
+      }
     }
 }
 
